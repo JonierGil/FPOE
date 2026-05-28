@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelets Hello Greeting</title>
+    </h:head>
+    <h:body>
+        <p:card>
+            <f:facet name="title">
+                Gestionar asignaturas
+            </f:facet>
+            <h:panelGrid columns="3">
+                <p:outputLabel for="txfCodigo" value="Codigo : " />
+                <p:inputText id="txfCodigo" placeholder="Codigo" value="#{gestionarAsignaturas.asignatura.codigo}"/>
+                <p:message for="txfCodigo"/>
+                
+                <p:outputLabel for="txfNombre" value="Nombre : "/>
+                <p:inputText id="txfNombre" placeholder="Nombre" value="#{gestionarAsignaturas.asignatura.nombre}"/>
+                <p:message for="txfNombre"/>
+                
+                <p:outputLabel for="txfCreditos" value="Creditos : "/>
+                <p:inputNumber id="txfCreditos" placeholder="Creditos" value="#{gestionarAsignaturas.asignatura.creditos}"/>
+                <p:message for="txfCreditos"/>
+                
+                <p:outputLabel for="txfIntensidad" value="Intensidad : "/>
+                <p:inputNumber id="txfIntensidad" placeholder="Intensidad" value="#{gestionarAsignaturas.asignatura.intencidad}"/>
+                <p:message for="txfIntensidad"/>
+                
+                
+            </h:panelGrid>
+            <f:facet name="footer">
+                <p:commandButton icon="pi pi-check" value="save"/>
+                <p:commandButton icon="pi pi-times" value="cancel"
+                                 styleClass="ui-button-secondary"
+                                 style="margin-left: .5em"/>
+            </f:facet>
+        </p:card>
+        <div class="card">
+            <p:dataTable>
+                <f:facet name="header"> Asignaturas</f:facet>
+                <p:column headerText="Codigo">
+                    
+                </p:column>
+                <p:column headerText="Nombre">
+                    
+                </p:column>
+                <p:column headerText="Creditos">
+                    
+                </p:column>
+                <p:column headerText="Intensidad">
+                    
+                </p:column>
+            </p:dataTable>
+        </div>
+    </h:body>
+</html>

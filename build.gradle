@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'war'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    providedCompile 'jakarta.platform:jakarta.jakartaee-web-api:11.0.0'
+    implementation 'org.primefaces:primefaces:15.0.14:jakarta'
+    testImplementation     'junit:junit:4.13'
+
+    // Source: https://mvnrepository.com/artifact/org.eclipse.persistence/eclipselink
+    implementation 'org.eclipse.persistence:eclipselink:4.0.9'
+    
+    // Source: https://mvnrepository.com/artifact/com.mysql/mysql-connector-j
+    implementation 'com.mysql:mysql-connector-j:9.7.0'
+}

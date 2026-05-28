@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="persistence.AsignaturaDAOTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-05-27T20:26:16" hostname="PAL-53990068" time="1.959">
+  <properties/>
+  <testcase name="testBuscarPorCodigo" classname="persistence.AsignaturaDAOTest" time="1.959"/>
+  <system-out><![CDATA[[EL Info]: 2026.05.27 15:26:17.539--ServerSession(962507619)--EclipseLink, version: Eclipse Persistence Services - 4.0.9.v202601021151-061974965b9a70b72fdcb96dae36a4d6ef5df9ce
+insetar
+1
+buscar : 1
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

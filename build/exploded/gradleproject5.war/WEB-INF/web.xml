@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+	 version="6.0">
+<!--
+     jakarta.faces.PROJECT_STAGE describe dónde se encuentra esta aplicación 
+     en el ciclo de vida desarrollo de software de Jakarta Faces. 
+     Los valores válidos son "Desarrollo", "UnitTest", "SystemTest" o "Producción"
+    -->
+    <context-param>
+        <param-name>jakarta.faces.PROJECT_STAGE</param-name>
+        <param-value>Development</param-value>
+    </context-param>
+    <!--
+     Los archivos jakarta Faces (.xhtml) deben ser procesados por la plataforma 
+     Jakarta EE antes de ser transferidos al cliente web. Las siguientes 
+     instrucciones:
+       - Especifican la clase encargada de procesar los archivos Jakarta Faces
+       - Especificación de la extensión de los archivos Jakarta Faces
+    -->
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>jakarta.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.xhtml</url-pattern>
+    </servlet-mapping>
+    <!--
+     Especificación de la página inicial de la aplicaci{on
+    -->
+    <welcome-file-list>
+        <welcome-file>index.xhtml</welcome-file>
+    </welcome-file-list>
+    <!--
+    -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error.xhtml</location>
+    </error-page>
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/error.xhtml</location>
+    </error-page>
+    
+        <!--
+    JSF1091: no se ha encontrado ningún tipo MIME para el archivo primeicons/primeicons.eot.  
+    Para resolverlo, agregue una asignación de tipo MIME al archivo web.xml de la aplicación.|#]
+    Solución tomada de : https://forum.primefaces.org/viewtopic.php?t=44247
+    -->
+    <mime-mapping>
+        <extension>ttf</extension>
+        <mime-type>application/x-font-ttf</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>woff</extension>
+        <mime-type>application/x-font-woff</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>woff2</extension>
+        <mime-type>application/x-font-woff2</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>eot</extension>
+        <mime-type>application/x-font-eot</mime-type>
+    </mime-mapping>
+</web-app>
