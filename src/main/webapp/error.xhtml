@@ -4,12 +4,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
 -->
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>Pagina de error</title>
+<html lang="es"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html">
+    <h:head>
+        <title>ERROR</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body>
-        <div>error error error</div>
-    </body>
+    </h:head>
+    <h:body>
+        <h1>Se ha producido un error</h1>
+        <p>Ups, algo salió mal.</p>
+        <!-- Muestra detalles si es necesario (solo en desarrollo) -->
+        <h:outputText value="#{requestScope['jakarta.servlet.error.message']}" />
+    </h:body>
 </html>
