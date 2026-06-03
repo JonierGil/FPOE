@@ -4,7 +4,7 @@
  */
 package Controllers;
 
-import Logica.ILogica;
+import ogica.ILogica;
 import jakarta.inject.Named;
 import jakarta.inject.Inject;
 import jakarta.enterprise.context.SessionScoped;
@@ -32,7 +32,7 @@ import modelo.Asignatura;
 @SessionScoped
 public class GestionarAsignaturas implements Serializable{
     
-    //@Inject
+    @Inject
     private ILogica iLogica;
     
     private Asignatura asignatura = new Asignatura("740014C", "FPOE", (byte)3, (byte)4);
