@@ -12,7 +12,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit t
         <title>Facelets Hello Greeting</title>
     </h:head>
     <h:body>
-        <p:card>
+        <h:form id="formulario">
+            <p:card>
             <f:facet name="title">
                 Gestionar asignaturas
             </f:facet>
@@ -42,6 +43,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit t
                                  style="margin-left: .5em"/>
             </f:facet>
         </p:card>
+        </h:form>
         <div class="card">
             <p:dataTable>
                 <f:facet name="header"> Asignaturas</f:facet>

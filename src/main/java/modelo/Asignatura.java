@@ -21,7 +21,7 @@ import jakarta.persistence.NamedQuery;
     @NamedQuery(name="Asignatura.buscarPorEscuela",
                 query="SELECT a FROM Asignatura a WHERE a.codigo LIKE :prefijo ORDER BY a.codigo ASC"),
     @NamedQuery(name="Asignatura.buscarAsignaturas",
-                query="SELECT * FROM Asignatura ORDER BY codigo ASC")
+                query="SELECT a FROM Asignatura a ORDER BY a.codigo ASC")
 })
 public class Asignatura extends AbstractEntity {
     @Column(nullable = false, length = 7,unique = true)
