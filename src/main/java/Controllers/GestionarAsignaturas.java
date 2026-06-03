@@ -5,6 +5,8 @@
 package Controllers;
 
 import Logica.ILogica;
+import jakarta.inject.Named;
+import jakarta.inject.Inject;
 import jakarta.enterprise.context.SessionScoped;
 import jakarta.faces.application.Application;
 import jakarta.faces.application.FacesMessage;
@@ -15,8 +17,6 @@ import jakarta.faces.context.ResponseStream;
 import jakarta.faces.context.ResponseWriter;
 import jakarta.faces.lifecycle.Lifecycle;
 import jakarta.faces.render.RenderKit;
-import jakarta.inject.Inject;
-import jakarta.inject.Named;
 import java.io.Serializable;
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.Iterator;
@@ -32,13 +32,17 @@ import modelo.Asignatura;
 @SessionScoped
 public class GestionarAsignaturas implements Serializable{
     
-    @Inject
+    //@Inject
     private ILogica iLogica;
     
     private Asignatura asignatura = new Asignatura("740014C", "FPOE", (byte)3, (byte)4);
 
     public Asignatura getAsignatura() {
         return asignatura;
+    }
+    
+    public void cancelar(){
+        this.asignatura = new Asignatura();
     }
     
     public void guardar(){

@@ -50,11 +50,11 @@ public class Asignatura extends AbstractEntity {
         return nombre;
     }
 
-    public short getCreditos() {
+    public byte getCreditos() {
         return creditos;
     }
 
-    public short getIntensidad() {
+    public byte getIntensidad() {
         return intensidad;
     }
 

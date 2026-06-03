@@ -40,6 +40,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit t
                     <p:commandButton icon="pi pi-check" value="save"
                                      action="#{gestionarAsignaturas.guardar()}"/>
                     <p:commandButton icon="pi pi-times" value="cancel"
+                                     action="#{gestionarAsignaturas.cancelar()}"
+                                     update="formulario"
                                      styleClass="ui-button-secondary"
                                      style="margin-left: .5em"/>
                 </f:facet>
