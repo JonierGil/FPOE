@@ -13,7 +13,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit t
     </h:head>
     <h:body>
         <h:form id="formulario">
-                <p:card>
+            <p:card>
                 <f:facet name="title">
                     Gestionar asignaturas
                 </f:facet>
@@ -37,7 +37,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit t
 
                 </h:panelGrid>
                 <f:facet name="footer">
-                    <p:commandButton icon="pi pi-check" value="save"/>
+                    <p:commandButton icon="pi pi-check" value="save"
+                                     action="#{gestionarAsignaturas.guardar()}"/>
                     <p:commandButton icon="pi pi-times" value="cancel"
                                      styleClass="ui-button-secondary"
                                      style="margin-left: .5em"/>

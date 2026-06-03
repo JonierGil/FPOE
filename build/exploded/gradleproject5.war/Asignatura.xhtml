@@ -14,35 +14,36 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit t
     <h:body>
         <h:form id="formulario">
             <p:card>
-            <f:facet name="title">
-                Gestionar asignaturas
-            </f:facet>
-            <h:panelGrid columns="3">
-                <p:outputLabel for="txfCodigo" value="Codigo : " />
-                <p:inputText id="txfCodigo" placeholder="Codigo" value="#{gestionarAsignaturas.asignatura.codigo}"/>
-                <p:message for="txfCodigo"/>
-                
-                <p:outputLabel for="txfNombre" value="Nombre : "/>
-                <p:inputText id="txfNombre" placeholder="Nombre" value="#{gestionarAsignaturas.asignatura.nombre}"/>
-                <p:message for="txfNombre"/>
-                
-                <p:outputLabel for="txfCreditos" value="Creditos : "/>
-                <p:inputNumber id="txfCreditos" placeholder="Creditos" value="#{gestionarAsignaturas.asignatura.creditos}"/>
-                <p:message for="txfCreditos"/>
-                
-                <p:outputLabel for="txfIntensidad" value="Intensidad : "/>
-                <p:inputNumber id="txfIntensidad" placeholder="Intensidad" value="#{gestionarAsignaturas.asignatura.intencidad}"/>
-                <p:message for="txfIntensidad"/>
-                
-                
-            </h:panelGrid>
-            <f:facet name="footer">
-                <p:commandButton icon="pi pi-check" value="save"/>
-                <p:commandButton icon="pi pi-times" value="cancel"
-                                 styleClass="ui-button-secondary"
-                                 style="margin-left: .5em"/>
-            </f:facet>
-        </p:card>
+                <f:facet name="title">
+                    Gestionar asignaturas
+                </f:facet>
+                <h:panelGrid columns="3">
+                    <p:outputLabel for="txfCodigo" value="Codigo : " />
+                    <p:inputText id="txfCodigo" placeholder="Codigo" value="#{gestionarAsignaturas.asignatura.codigo}"/>
+                    <p:message for="txfCodigo"/>
+
+                    <p:outputLabel for="txfNombre" value="Nombre : "/>
+                    <p:inputText id="txfNombre" placeholder="Nombre" value="#{gestionarAsignaturas.asignatura.nombre}"/>
+                    <p:message for="txfNombre"/>
+
+                    <p:outputLabel for="txfCreditos" value="Creditos : "/>
+                    <p:inputNumber id="txfCreditos" placeholder="Creditos" value="#{gestionarAsignaturas.asignatura.creditos}"/>
+                    <p:message for="txfCreditos"/>
+
+                    <p:outputLabel for="txfIntensidad" value="Intensidad : "/>
+                    <p:inputNumber id="txfIntensidad" placeholder="Intensidad" value="#{gestionarAsignaturas.asignatura.intensidad}"/>
+                    <p:message for="txfIntensidad"/>
+
+
+                </h:panelGrid>
+                <f:facet name="footer">
+                    <p:commandButton icon="pi pi-check" value="save"
+                                     action="#{gestionarAsignaturas.guardar()}"/>
+                    <p:commandButton icon="pi pi-times" value="cancel"
+                                     styleClass="ui-button-secondary"
+                                     style="margin-left: .5em"/>
+                </f:facet>
+            </p:card>
         </h:form>
         <div class="card">
             <p:dataTable>

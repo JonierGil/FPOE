@@ -34,10 +34,4 @@ public class AsignaturaDAO extends AbstractDAO<Asignatura> {
                 .getResultList();
     }
     
-    public List<Asignatura> buscarAsignaturas(){
-        EntityManager em = super.getEntityManager();
-        return em.createNamedQuery("Asignatura.buscarAsignaturas")
-                .getResultList();
-    }
-    
 }
